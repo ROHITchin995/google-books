@@ -36,8 +36,8 @@ class App extends Component {
     </header>
     <div className="container main-content">
       <FormGroup>
-        <InputGroup>
-          <FormControl type="text" placeholder="Search for a book"
+        <InputGroup className='App-input'>
+          <FormControl className='input' type="text" placeholder="Search for a book"
           onChange={ event => this.setState({ query: event.target.value }) }
           onKeyPress={ event => {
             if ('Enter' === event.key) {

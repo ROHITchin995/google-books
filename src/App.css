@@ -26,3 +26,13 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.App-input{
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin-left: 100px;
+}
+.input{
+  flex: 1;
+  height: 20px;
+}
