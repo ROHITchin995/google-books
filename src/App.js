@@ -16,7 +16,13 @@ class App extends Component {
     }
   }
 
-  search() {
+  search(e) {
+    e.preventDefault()
+    if(this.state.query === "")
+    {
+      alert("please enter a book name")
+      return
+    }
     fetch(`${API_URL}${this.state.query}`)
       .then(response => response.json())
       .then(json => {
@@ -41,10 +47,10 @@ class App extends Component {
           onChange={ event => this.setState({ query: event.target.value }) }
           onKeyPress={ event => {
             if ('Enter' === event.key) {
-              this.search();
+              this.search(event);
             }
           }} />
-          <SearchIcon onClick={() => this.search()}/>
+          <SearchIcon onClick={(event) => this.search(event)}/>
         </InputGroup>
       </FormGroup>
       <Gallery items={this.state.items} />
