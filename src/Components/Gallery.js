@@ -8,11 +8,11 @@ class Gallery extends Component{
                 {this.props.items.map((item, index)=>{
                     let {title, imageLinks, infoLink} = item.volumeInfo;
                     return(
-                        <a href={infoLink} key={index} target="_blank" rel="noopener">
+                        <a href={infoLink} key={index} target="_blank" rel="noopener" className="book">
                             <img src={undefined !== imageLinks ? imageLinks.thumbnail : {book}} 
                             alt={`Pictured: The cover for the book ${title}`} 
                             className="bookCover"/>
-                            <header>
+                            <header className="bookTitle">
                                 {title}
                             </header>
                         </a>
