@@ -1,6 +1,6 @@
 import { Component } from "react";
 import book from '../Images/771.jpg'
-
+import './Gallery.css'
 class Gallery extends Component{
     render(){
         return(
